@@ -6,7 +6,7 @@ import {
 } from '@/components/ui/hover-card'
 import { BiLogoPostgresql, BiLogoTypescript } from 'react-icons/bi'
 import { FaNodeJs, FaFire } from 'react-icons/fa'
-import { FcPhoneAndroid, FcAndroidOs } from 'react-icons/fc'
+import { FcAndroidOs } from 'react-icons/fc'
 import { RiTailwindCssFill } from 'react-icons/ri'
 import {
   SiExpress,
@@ -14,7 +14,6 @@ import {
   SiNextdotjs,
   SiPrisma,
   SiReact,
-  SiTypescript,
 } from 'react-icons/si'
 import { TbBrandRedux } from 'react-icons/tb'
 
@@ -33,8 +32,8 @@ export function Skills() {
           {stringSkills}
         </Button>
       </HoverCardTrigger>
-      <HoverCardContent className="w-80 lg:relative lg:right-[6rem] top-[4rem]">
-        <div className="flex flex-wrap justify-around gap-4" >
+      <HoverCardContent className="top-[4rem] w-80 lg:relative lg:right-[6rem]">
+        <div className="flex flex-wrap justify-around gap-4">
           <BiLogoTypescript size={50} fill="oklch(80.9% 0.105 251.813)" />
           <SiMongodb size={50} fill="oklch(62.7% 0.194 149.214)" />
           <SiExpress size={50} fill="oklch(70.4% 0.191 22.216)" />
@@ -45,9 +44,8 @@ export function Skills() {
           <SiNextdotjs size={50} fill="#737373" />
           <SiPrisma size={50} fill="black" />
           <RiTailwindCssFill size={50} fill="oklch(84.5% 0.143 164.978)" />
-          <TbBrandRedux size={50} className='text-purple-700' />
-          <BiLogoPostgresql size={50} fill='oklch(49.6% 0.265 301.924)' />
-
+          <TbBrandRedux size={50} className="text-purple-700" />
+          <BiLogoPostgresql size={50} fill="oklch(49.6% 0.265 301.924)" />
         </div>
       </HoverCardContent>
     </HoverCard>

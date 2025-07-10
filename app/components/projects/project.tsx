@@ -1,7 +1,6 @@
 import { ProjectsTypes } from '@/app/projects'
 import {
   AlertDialog,
-  AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
