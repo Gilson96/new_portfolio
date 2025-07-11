@@ -1,4 +1,4 @@
-# Gilson96 Portfolio
+# My Portfolio
 
 Welcome to my personal portfolio showcasing my projects, skills, and experience as a React Native and web developer.
 
