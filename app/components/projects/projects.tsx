@@ -20,7 +20,7 @@ function Projects() {
       <p className="pb-[1rem] text-2xl font-bold text-white text-shadow-neutral-500 text-shadow-sm">
         Projects & Skills
       </p>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-4 max-[425px]:flex max-[425px]:flex-col">
         {projectsfiltered(1).map((project) => (
           <Project key={project.id} project={project}>
             <SiMongodb size={30} fill="oklch(62.7% 0.194 149.214)" />

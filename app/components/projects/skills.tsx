@@ -1,9 +1,8 @@
-import { Button } from '@/components/ui/button'
 import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from '@/components/ui/hover-card'
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover'
 import { BiLogoPostgresql, BiLogoTypescript } from 'react-icons/bi'
 import { FaNodeJs, FaFire } from 'react-icons/fa'
 import { FcAndroidOs } from 'react-icons/fc'
@@ -19,35 +18,67 @@ import { TbBrandRedux } from 'react-icons/tb'
 
 export function Skills() {
   const stringSkills = '<Skills />'
+
   return (
-    <HoverCard>
-      <HoverCardTrigger
-        className="rounded-5xl flex h-40 w-40 cursor-pointer flex-col items-center justify-center gap-2 bg-neutral-800 shadow-xs shadow-white transition hover:shadow-lg hover:shadow-white/40"
-        asChild
-      >
-        <Button
-          variant="link"
-          className="text-2xl font-bold text-white text-shadow-neutral-500 text-shadow-sm"
-        >
+    <Popover>
+      <PopoverTrigger asChild>
+        <button className="rounded-5xl flex h-40 w-40 cursor-pointer flex-col items-center justify-center gap-2 bg-neutral-800 text-2xl font-bold text-white shadow-xs shadow-white transition text-shadow-neutral-500 text-shadow-sm hover:shadow-lg hover:shadow-white/40">
           {stringSkills}
-        </Button>
-      </HoverCardTrigger>
-      <HoverCardContent className="top-[4rem] w-80 lg:relative lg:right-[6rem]">
-        <div className="flex flex-wrap justify-around gap-4">
-          <BiLogoTypescript size={50} fill="oklch(80.9% 0.105 251.813)" />
-          <SiMongodb size={50} fill="oklch(62.7% 0.194 149.214)" />
-          <SiExpress size={50} fill="oklch(70.4% 0.191 22.216)" />
-          <SiReact size={50} fill="var(--color-blue-500) " />
-          <FaNodeJs size={50} fill="oklch(76.8% 0.233 130.85)" />
-          <FcAndroidOs size={50} />
-          <FaFire size={50} fill={'orange'} />
-          <SiNextdotjs size={50} fill="#737373" />
-          <SiPrisma size={50} fill="black" />
-          <RiTailwindCssFill size={50} fill="oklch(84.5% 0.143 164.978)" />
-          <TbBrandRedux size={50} className="text-purple-700" />
-          <BiLogoPostgresql size={50} fill="oklch(49.6% 0.265 301.924)" />
+        </button>
+      </PopoverTrigger>
+
+      <PopoverContent className="relative top-[8rem] w-[20rem] rounded-xl border-none bg-neutral-950 shadow-md max-[425px]:left-[2.5rem] max-[425px]:h-full max-[425px]:w-[30%] max-[375px]:left-[0.4rem] max-md:right-[3rem] lg:relative lg:right-[6rem] lg:h-[20rem] lg:w-[25rem]">
+        <div className="flex flex-wrap items-center justify-around gap-6">
+          <div className="flex flex-col items-center justify-center">
+            <BiLogoTypescript size={50} fill="oklch(80.9% 0.105 251.813)" />
+            <p className="text-white">Typescript</p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <SiMongodb size={50} fill="oklch(62.7% 0.194 149.214)" />
+            <p className="text-white">MongoDB</p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <SiExpress size={50} fill="oklch(70.4% 0.191 22.216)" />
+            <p className="text-white">ExpressJs</p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <SiReact size={50} fill="var(--color-blue-500)" />
+            <p className="text-white">React</p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <FaNodeJs size={50} fill="oklch(76.8% 0.233 130.85)" />
+            <p className="text-white">NodeJs</p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <FcAndroidOs size={50} />
+            <p className="text-white">Android</p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <FaFire size={50} fill="orange" />
+            <p className="text-white">Firebase</p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <SiNextdotjs size={50} fill="white" />
+            <p className="text-white">Nextjs</p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <SiPrisma size={50} fill="white" />
+            <p className="text-white">Prisma</p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <RiTailwindCssFill size={50} fill="oklch(84.5% 0.143 164.978)" />
+            <p className="text-white">Tailwindcss</p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <TbBrandRedux size={50} className="text-purple-700" />
+            <p className="text-white">Redux</p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <BiLogoPostgresql size={50} fill="oklch(49.6% 0.265 301.924)" />
+            <p className="text-white">PostgreSQL</p>
+          </div>
         </div>
-      </HoverCardContent>
-    </HoverCard>
+      </PopoverContent>
+    </Popover>
   )
 }

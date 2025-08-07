@@ -16,12 +16,12 @@ export const projects: ProjectsTypes[] = [
     description:
       'MERN Foods is a full-stack food delivery web app inspired by Uber Eats, built using the MERN stack with modern frontend tools like TypeScript, Redux Toolkit, TailwindCSS, and Redux Persist.',
     image:
-      'https://github.com/Gilson96/mern-foods/blob/master/src/screenshots/homepage.png?raw=true',
+      'https://github.com/Gilson96/mern-food/blob/master/src/assets/screenshots/homePage.png?raw=true',
 
-    live: 'https://gilson96.github.io/mern-foods',
-    github: 'https://github.com/Gilson96/mern-foods/tree/master',
+    live: 'https://mernfoods.netlify.app',
+    github: 'https://github.com/Gilson96/mern-food/tree/master',
     skills: [
-      'React, TypeScript, ChakraUI, Redux, Tailwindcss, nodejs, express, mongoDb',
+      'React, TypeScript, Redux, Redux-Tookit, Tailwindcss, Nodejs, Express, MongoDb',
     ],
     tech: 'Mern-Stack',
   },

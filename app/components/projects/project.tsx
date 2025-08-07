@@ -26,7 +26,7 @@ function Project({
     <AlertDialog>
       <AlertDialogTrigger className="flex h-40 w-40 cursor-pointer flex-col items-center justify-center gap-2 rounded-3xl bg-neutral-800 shadow-xs shadow-white transition hover:shadow-lg hover:shadow-white/40">
         <div className="flex items-center justify-center">{children}</div>
-        <p className="text-sm font-bold text-white w-[90%] text-shadow-sm text-shadow-neutral-500">
+        <p className="w-[90%] text-sm font-bold text-white text-shadow-neutral-500 text-shadow-sm">
           {project.tech}
         </p>
       </AlertDialogTrigger>
@@ -46,10 +46,12 @@ function Project({
           </AlertDialogTitle>
 
           <AlertDialogDescription className="flex flex-col gap-4 text-sm text-gray-800">
-            <p className='text-xl font-bold'>{project.title}</p>
+            <p className="text-xl font-bold">{project.title}</p>
             <div className="flex flex-wrap items-center gap-2">
-              <span className="font-semibold text-black">Skills:</span>
-              <span>{project.skills.join(', ')}</span>
+              <span>
+                <span className="font-semibold text-black">Skills: </span>
+                {project.skills.join(', ')}
+              </span>
             </div>
 
             <div className="flex flex-col gap-1">
@@ -60,12 +62,12 @@ function Project({
             </div>
           </AlertDialogDescription>
         </AlertDialogHeader>
-<hr className='w-full h-[1px] bg-black'/>
+        <hr className="h-[1px] w-full bg-black" />
         <AlertDialogFooter>
           <div className="flex w-full items-center justify-between">
             <div className="flex w-full items-center gap-1">
               <p className="font-semibold text-black">Links: </p>
-              <div className="flex gap-2 w-[50%] lg:w-[70%] items-center">
+              <div className="flex w-[80%] items-center gap-2 lg:w-[70%]">
                 <div className="flex w-full items-center justify-center gap-2 rounded-full border p-[2%] shadow-md transition-transform duration-200 hover:-translate-y-1 hover:underline hover:shadow-lg">
                   <LinkIcon size={15} />
                   <Link
