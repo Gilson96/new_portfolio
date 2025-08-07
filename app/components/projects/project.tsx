@@ -81,7 +81,9 @@ function Project({
                     live demo
                   </Link>
                 </div>
-                <div className="flex w-full items-center justify-center gap-2 rounded-full border p-[2%] shadow-md transition-transform duration-200 hover:-translate-y-1 hover:underline hover:shadow-lg">
+                <div
+                  className={`${mobileProject ? 'w-[50%]' : 'w-full'} hover:shadow-lg' flex items-center justify-center gap-2 rounded-full border p-[2%] shadow-md transition-transform duration-200 hover:-translate-y-1 hover:underline`}
+                >
                   <BsGithub size={15} />
                   <Link
                     href={project.github}
