@@ -22,7 +22,7 @@ function Projects() {
       </p>
       <div className="grid grid-cols-2 gap-4 max-[425px]:flex max-[425px]:flex-col">
         {projectsfiltered(1).map((project) => (
-          <Project key={project.id} project={project}>
+          <Project mobileProject={false} key={project.id} project={project}>
             <SiMongodb size={30} fill="oklch(62.7% 0.194 149.214)" />
             <SiExpress size={30} fill="oklch(70.4% 0.191 22.216)" />
             <SiReact size={30} fill="var(--color-blue-500) " />
@@ -30,7 +30,7 @@ function Projects() {
           </Project>
         ))}
         {projectsfiltered(3).map((project) => (
-          <Project key={project.id} project={project}>
+          <Project mobileProject={true} key={project.id} project={project}>
             <FcPhoneAndroid size={30} />
             <FaPlus size={15} fill="white" />
             <FcAndroidOs size={30} />
@@ -39,7 +39,7 @@ function Projects() {
           </Project>
         ))}
         {projectsfiltered(2).map((project) => (
-          <Project key={project.id} project={project}>
+          <Project mobileProject={false} key={project.id} project={project}>
             <SiNextdotjs size={30} fill="#737373" />
             <div className="px-0.5"></div>
             <FaPlus size={15} fill="white" />

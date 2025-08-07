@@ -18,7 +18,9 @@ import { BsGithub } from 'react-icons/bs'
 function Project({
   project,
   children,
+  mobileProject,
 }: {
+  mobileProject: boolean
   children: ReactNode
   project: ProjectsTypes
 }) {
@@ -68,7 +70,9 @@ function Project({
             <div className="flex w-full items-center gap-1">
               <p className="font-semibold text-black">Links: </p>
               <div className="flex w-[80%] items-center gap-2 lg:w-[70%]">
-                <div className="flex w-full items-center justify-center gap-2 rounded-full border p-[2%] shadow-md transition-transform duration-200 hover:-translate-y-1 hover:underline hover:shadow-lg">
+                <div
+                  className={`${mobileProject ? 'hidden' : 'flex w-full items-center justify-center gap-2 rounded-full border p-[2%] shadow-md transition-transform duration-200 hover:-translate-y-1 hover:underline hover:shadow-lg'}`}
+                >
                   <LinkIcon size={15} />
                   <Link
                     href={project.live}
