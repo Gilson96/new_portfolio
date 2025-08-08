@@ -26,9 +26,9 @@ function Project({
 }) {
   return (
     <AlertDialog>
-      <AlertDialogTrigger className="flex h-40 w-40 cursor-pointer flex-col items-center justify-center gap-2 rounded-3xl bg-neutral-800 shadow-xs shadow-white transition hover:shadow-lg hover:shadow-white/40">
+      <AlertDialogTrigger className="flex h-[8rem] w-[8rem] md:h-40 md:w-40 cursor-pointer flex-col items-center justify-center gap-2 rounded-3xl bg-neutral-800 shadow-xs shadow-white transition hover:shadow-lg hover:shadow-white/40">
         <div className="flex items-center justify-center">{children}</div>
-        <p className="w-[90%] text-sm font-bold text-white text-shadow-neutral-500 text-shadow-sm">
+        <p className="w-[90%] text-xs md:text-sm font-bold text-white text-shadow-neutral-500 text-shadow-sm">
           {project.tech}
         </p>
       </AlertDialogTrigger>
@@ -68,33 +68,32 @@ function Project({
         <AlertDialogFooter>
           <div className="flex w-full items-center justify-between">
             <div className="flex w-full items-center gap-1">
-              <p className="font-semibold text-black">Links: </p>
+              <p className="font-semibold text-black text-xs md:text-base">Links: </p>
               <div className="flex w-[80%] items-center gap-2 lg:w-[70%]">
                 <div
                   className={`${mobileProject ? 'hidden' : 'flex w-full items-center justify-center gap-2 rounded-full border p-[2%] shadow-md transition-transform duration-200 hover:-translate-y-1 hover:underline hover:shadow-lg'}`}
                 >
-                  <LinkIcon size={15} />
                   <Link
                     href={project.live}
-                    className="font-medium text-blue-500"
+                    className="font-medium text-blue-500 text-xs md:text-base"
                   >
                     live demo
                   </Link>
                 </div>
                 <div
-                  className={`${mobileProject ? 'w-[50%]' : 'w-full'} hover:shadow-lg' flex items-center justify-center gap-2 rounded-full border p-[2%] shadow-md transition-transform duration-200 hover:-translate-y-1 hover:underline`}
+                  className={`${mobileProject ? 'w-[80%]' : 'w-full'} hover:shadow-lg' flex items-center justify-center gap-2 rounded-full border p-[2%] shadow-md transition-transform duration-200 hover:-translate-y-1 hover:underline`}
                 >
                   <BsGithub size={15} />
                   <Link
                     href={project.github}
-                    className="font-medium text-blue-500"
+                    className="font-medium text-blue-500 text-xs md:text-base"
                   >
                     github
                   </Link>
                 </div>
               </div>
             </div>
-            <AlertDialogCancel className="cursor-pointer rounded-md bg-gray-100 px-4 py-2 font-medium text-gray-700 shadow-md transition-transform duration-200 hover:-translate-y-1 hover:bg-gray-200 hover:shadow-lg">
+            <AlertDialogCancel className="cursor-pointer rounded-md bg-gray-100 px-2 py-1 md:py-4 md:px-3 font-medium text-gray-700 text-xs shadow-md transition-transform duration-200 hover:-translate-y-1 hover:bg-gray-200 hover:shadow-lg">
               Close
             </AlertDialogCancel>
           </div>

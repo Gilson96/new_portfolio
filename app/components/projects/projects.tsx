@@ -16,11 +16,11 @@ function Projects() {
     return projects.filter((project) => project.id === id)
   }
   return (
-    <div className="flex w-full flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center">
       <p className="pb-[1rem] text-2xl font-bold text-white text-shadow-neutral-500 text-shadow-sm">
         Projects & Skills
       </p>
-      <div className="grid grid-cols-2 gap-4 max-[425px]:flex max-[425px]:flex-col">
+      <div className="grid grid-cols-2 gap-4 md:w-[20rem]">
         {projectsfiltered(1).map((project) => (
           <Project mobileProject={false} key={project.id} project={project}>
             <SiMongodb size={30} fill="oklch(62.7% 0.194 149.214)" />

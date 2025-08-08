@@ -22,12 +22,14 @@ export function Skills() {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <button className="rounded-5xl flex h-40 w-40 cursor-pointer flex-col items-center justify-center gap-2 bg-neutral-800 text-2xl font-bold text-white shadow-xs shadow-white transition text-shadow-neutral-500 text-shadow-sm hover:shadow-lg hover:shadow-white/40">
-          {stringSkills}
+        <button  className="flex h-[8rem] w-[8rem] md:h-40 md:w-40 cursor-pointer flex-col items-center justify-center gap-2 rounded-3xl bg-neutral-800 shadow-xs shadow-white transition hover:shadow-lg hover:shadow-white/40">
+          <p className="w-[90%] text-base font-bold text-white text-shadow-neutral-500 text-shadow-sm">
+           {stringSkills}
+          </p>
         </button>
       </PopoverTrigger>
 
-      <PopoverContent className="relative top-[8rem] w-[20rem] rounded-xl border-none bg-neutral-950 shadow-md max-[425px]:left-[2.5rem] max-[425px]:h-full max-[425px]:w-[30%] max-[375px]:left-[0.4rem] max-md:right-[3rem] lg:relative lg:right-[6rem] lg:h-[20rem] lg:w-[25rem]">
+      <PopoverContent className="relative top-[7rem] w-[20rem] rounded-xl border-none bg-neutral-950 shadow-md max-[640px]:right-[1.5rem] max-[425px]:h-full max-[425px]:w-[30%] max-[375px]:left-[0.2rem] md:right-[2rem] lg:relative lg:right-[6rem] lg:h-[20rem] lg:w-[25rem]">
         <div className="flex flex-wrap items-center justify-around gap-6">
           <div className="flex flex-col items-center justify-center">
             <BiLogoTypescript size={50} fill="oklch(80.9% 0.105 251.813)" />
