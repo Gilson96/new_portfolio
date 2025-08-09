@@ -13,8 +13,6 @@ import { FcAndroidOs } from 'react-icons/fc'
 import { Skills } from './skills'
 
 const ProjectsBlock = () => {
-  const stringSkills = '<Skills />'
-
   return (
     <>
       <Block

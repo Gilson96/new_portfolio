@@ -7,16 +7,17 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import Image from 'next/image'
 
 export const HeaderBlock = () => (
   <Block className="col-span-12 row-span-2 md:col-span-6">
-    <img
+    <Image
       src="https://api.dicebear.com/8.x/lorelei-neutral/svg?seed=John"
       alt="avatar"
       className="mb-4 size-14 rounded-full"
     />
     <h1 className="mb-12 text-xl leading-tight font-medium">
-      Hi, I'm Gilson de Almeida.{' '}
+      Hi, I&#39;m Gilson de Almeida.{' '}
       <span className="text-zinc-400">
         I&#39;m a full-stack developer with a strong foundation in React and
         Node.js, committed to building thoughtful and efficient web
