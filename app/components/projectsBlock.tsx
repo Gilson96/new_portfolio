@@ -75,15 +75,8 @@ const ProjectsBlock = () => {
           <p className="text-sm">React-Native + Firebase </p>
         </Link>
       </Block>
-      <Block
-        whileHover={{
-          rotate: '2.5deg',
-          scale: 1.1,
-        }}
-        className="col-span-6 flex w-full cursor-pointer items-center justify-center border border-zinc-700 bg-zinc-800 md:col-span-3"
-      >
-        <Skills />
-      </Block>
+
+      <Skills />
     </>
   )
 }

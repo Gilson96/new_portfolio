@@ -16,6 +16,7 @@ import {
   SiReact,
 } from 'react-icons/si'
 import { TbBrandRedux } from 'react-icons/tb'
+import Block from './block'
 
 export function Skills() {
   const stringSkills = '<Skills />'
@@ -23,13 +24,21 @@ export function Skills() {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <p className="text-base font-bold text-white text-shadow-neutral-500 text-shadow-sm">
-          {stringSkills}
-        </p>
+        <Block
+          whileHover={{
+            rotate: '2.5deg',
+            scale: 1.1,
+          }}
+          className="col-span-6 flex w-full cursor-pointer items-center justify-center border border-zinc-700 bg-zinc-800 md:col-span-3"
+        >
+          <p className="text-base font-bold text-white text-shadow-neutral-500 text-shadow-sm">
+            {stringSkills}
+          </p>
+        </Block>
       </PopoverTrigger>
 
       <PopoverContent
-        side={screenSize.width < 767 ? "top" : "left"}
+        side={screenSize.width < 767 ? 'top' : 'left'}
         className="w-[20rem] rounded-xl border-zinc-700 bg-zinc-900 shadow-md"
       >
         <div className="flex flex-wrap items-center justify-around gap-6">
