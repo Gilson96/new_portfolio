@@ -3,6 +3,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover'
+import useScreenSize from '@/lib/useScreenSize'
 import { BiLogoPostgresql, BiLogoTypescript } from 'react-icons/bi'
 import { FaNodeJs, FaFire } from 'react-icons/fa'
 import { FcAndroidOs } from 'react-icons/fc'
@@ -18,18 +19,19 @@ import { TbBrandRedux } from 'react-icons/tb'
 
 export function Skills() {
   const stringSkills = '<Skills />'
-
+  const screenSize = useScreenSize()
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <button  className="flex h-[8rem] w-[8rem] md:h-40 md:w-40 cursor-pointer flex-col items-center justify-center gap-2 rounded-3xl bg-neutral-800 shadow-xs shadow-white transition hover:shadow-lg hover:shadow-white/40">
-          <p className="w-[90%] text-base font-bold text-white text-shadow-neutral-500 text-shadow-sm">
-           {stringSkills}
-          </p>
-        </button>
+        <p className="text-base font-bold text-white text-shadow-neutral-500 text-shadow-sm">
+          {stringSkills}
+        </p>
       </PopoverTrigger>
 
-      <PopoverContent className="relative top-[7rem] w-[20rem] rounded-xl border-none bg-neutral-950 shadow-md max-[640px]:right-[1.5rem] max-[425px]:h-full max-[425px]:w-[30%] max-[375px]:left-[0.2rem] md:right-[2rem] lg:relative lg:right-[6rem] lg:h-[20rem] lg:w-[25rem]">
+      <PopoverContent
+        side={screenSize.width < 767 ? "top" : "left"}
+        className="w-[20rem] rounded-xl border-zinc-700 bg-zinc-900 shadow-md"
+      >
         <div className="flex flex-wrap items-center justify-around gap-6">
           <div className="flex flex-col items-center justify-center">
             <BiLogoTypescript size={50} fill="oklch(80.9% 0.105 251.813)" />
