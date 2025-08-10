@@ -27,10 +27,10 @@ const ProjectsBlock = () => {
           className="flex h-full flex-col items-center justify-center gap-1 text-3xl text-white"
         >
           <div className="flex items-center gap-1">
-            <SiMongodb size={40} fill="oklch(62.7% 0.194 149.214)" />
-            <SiExpress size={40} fill="oklch(70.4% 0.191 22.216)" />
-            <SiReact size={40} fill="var(--color-blue-500) " />
-            <FaNodeJs size={40} fill="oklch(76.8% 0.233 130.85)" />
+            <SiMongodb size={30} fill="oklch(62.7% 0.194 149.214)" />
+            <SiExpress size={30} fill="oklch(70.4% 0.191 22.216)" />
+            <SiReact size={30} fill="var(--color-blue-500) " />
+            <FaNodeJs size={30} fill="oklch(76.8% 0.233 130.85)" />
           </div>
           <p className="text-sm">Mern-Stack</p>
         </Link>
@@ -47,11 +47,11 @@ const ProjectsBlock = () => {
           className="flex h-full flex-col items-center justify-center gap-1 text-3xl text-white"
         >
           <div className="flex items-center gap-1">
-            <SiNextdotjs size={40} fill="#737373" />
+            <SiNextdotjs size={30} fill="#737373" />
             <FaPlus size={10} fill="white" />
-            <SiPrisma size={40} fill="white" />
+            <SiPrisma size={30} fill="white" />
             <FaPlus size={10} fill="white" />
-            <BiLogoPostgresql size={40} fill="oklch(49.6% 0.265 301.924)" />
+            <BiLogoPostgresql size={30} fill="oklch(49.6% 0.265 301.924)" />
           </div>
           <p className="text-sm">Nextjs &middot; Prisma &middot; PostgreSQL </p>
         </Link>
@@ -68,9 +68,9 @@ const ProjectsBlock = () => {
           className="flex h-full flex-col items-center justify-center gap-1 text-3xl text-white"
         >
           <div className="flex items-center gap-1">
-            <FcAndroidOs size={40} fill="#737373" />
+            <FcAndroidOs size={30} fill="#737373" />
             <FaPlus size={10} fill="white" />
-            <FaFire size={40} fill="orange" />
+            <FaFire size={30} fill="orange" />
           </div>
           <p className="text-sm">React-Native + Firebase </p>
         </Link>
