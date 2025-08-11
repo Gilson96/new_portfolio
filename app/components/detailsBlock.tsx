@@ -12,6 +12,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
+import { SiGmail } from 'react-icons/si'
 
 export const HeaderBlock = () => (
   <Block className="col-span-12 row-span-2 md:col-span-6">
@@ -31,7 +32,7 @@ export const HeaderBlock = () => (
       </PopoverTrigger>
       <PopoverContent
         side="top"
-        className="flex w-[7rem] items-center justify-center gap-3 rounded-xl border-zinc-700 bg-zinc-900 shadow-md"
+        className="flex w-[9rem] items-center justify-center gap-3 rounded-xl border-zinc-700 bg-zinc-900 shadow-md"
       >
         <Link href={'https://github.com/Gilson96'}>
           <Tooltip>
@@ -43,6 +44,7 @@ export const HeaderBlock = () => (
             </TooltipContent>
           </Tooltip>
         </Link>
+
         <Link href={'https://www.linkedin.com/in/gilson-de-almeida'}>
           <Tooltip>
             <TooltipTrigger className="cursor-pointer">
@@ -50,6 +52,17 @@ export const HeaderBlock = () => (
             </TooltipTrigger>
             <TooltipContent>
               <p>My LinkedIn</p>
+            </TooltipContent>
+          </Tooltip>
+        </Link>
+
+        <Link href={'mailto:grafael99@gmail.com'}>
+          <Tooltip>
+            <TooltipTrigger className="cursor-pointer">
+              <SiGmail size={30} className="bg-white fill-red-500 rounded-lg" />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>My Email</p>
             </TooltipContent>
           </Tooltip>
         </Link>
