@@ -32,7 +32,7 @@ const ProjectsBlock = () => {
             <SiReact size={30} fill="var(--color-blue-500) " />
             <FaNodeJs size={30} fill="oklch(76.8% 0.233 130.85)" />
           </div>
-          <p className="text-sm">Mern-Stack</p>
+          <p className="text-sm">MERN Stack</p>
         </Link>
       </Block>
       <Block

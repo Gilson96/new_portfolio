@@ -59,7 +59,7 @@ export const HeaderBlock = () => (
         <Link href={'mailto:grafael99@gmail.com'}>
           <Tooltip>
             <TooltipTrigger className="cursor-pointer">
-              <SiGmail size={30} className="bg-white fill-red-500 rounded-lg" />
+              <SiGmail size={30} className="rounded-lg bg-white fill-red-500" />
             </TooltipTrigger>
             <TooltipContent>
               <p>My Email</p>
@@ -74,7 +74,7 @@ export const HeaderBlock = () => (
 export const AboutBlock = () => (
   <Block className="col-span-12 text-3xl leading-snug">
     <p className="text-xl">
-      My passion is learn and put in practice.{' '}
+      My passion is learn and putting in practice.{' '}
       <span className="text-xl text-zinc-400">
         Over time, I&#39;ve invested in honing my skills through self-directed
         learning, online courses, and hands-on personal projects. I&#39;m always

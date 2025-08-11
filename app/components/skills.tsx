@@ -31,8 +31,8 @@ export function Skills() {
           }}
           className="col-span-6 flex w-full cursor-pointer items-center justify-center border border-zinc-700 bg-zinc-800 md:col-span-3"
         >
-          <p className="text-base font-bold text-white text-shadow-neutral-500 text-shadow-sm">
-            {stringSkills}
+          <p className="text-xl font-bold text-white text-shadow-neutral-500 text-shadow-sm">
+            Skills
           </p>
         </Block>
       </PopoverTrigger>
