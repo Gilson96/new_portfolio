@@ -7,10 +7,15 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover'
 import { FaGithub, FaLinkedin, FaUserCircle } from 'react-icons/fa'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
 
 export const HeaderBlock = () => (
   <Block className="col-span-12 row-span-2 md:col-span-6">
-    <FaUserCircle size={50} className='my-2'/>
+    <FaUserCircle size={50} className="my-2" />
     <h1 className="mb-12 text-xl leading-tight font-medium">
       Hi, I&#39;m Gilson de Almeida.{' '}
       <span className="text-zinc-400">
@@ -26,13 +31,27 @@ export const HeaderBlock = () => (
       </PopoverTrigger>
       <PopoverContent
         side="top"
-        className="flex w-[7rem] items-center justify-center gap-2 rounded-xl border-zinc-700 bg-zinc-900 shadow-md"
+        className="flex w-[7rem] items-center justify-center gap-3 rounded-xl border-zinc-700 bg-zinc-900 shadow-md"
       >
         <Link href={'https://github.com/Gilson96'}>
-          <FaGithub size={30} className="text-white" />
+          <Tooltip>
+            <TooltipTrigger className="cursor-pointer">
+              <FaGithub size={30} className="text-white" />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>My Github</p>
+            </TooltipContent>
+          </Tooltip>
         </Link>
         <Link href={'https://www.linkedin.com/in/gilson-de-almeida'}>
-          <FaLinkedin size={30} className="text-blue-500" />
+          <Tooltip>
+            <TooltipTrigger className="cursor-pointer">
+              <FaLinkedin size={30} className="text-blue-500" />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>My LinkedIn</p>
+            </TooltipContent>
+          </Tooltip>
         </Link>
       </PopoverContent>
     </Popover>
