@@ -1,18 +1,9 @@
-import { FiArrowRight } from 'react-icons/fi'
+import { Button } from '@/components/ui/button'
 import Block from './block'
 import Link from 'next/link'
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover'
 import { FaGithub, FaLinkedin, FaUserCircle } from 'react-icons/fa'
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from '@/components/ui/tooltip'
-import { SiGmail } from 'react-icons/si'
+import { ArrowDownToLine } from 'lucide-react'
+import { CgMail } from 'react-icons/cg'
 
 export const HeaderBlock = () => (
   <Block className="col-span-12 row-span-2 md:col-span-6">
@@ -25,49 +16,32 @@ export const HeaderBlock = () => (
         applications.
       </span>
     </h1>
-    <Popover>
-      <PopoverTrigger className="flex cursor-pointer items-center gap-1 text-red-300 hover:underline">
-        <p>Contact me </p>
-        <FiArrowRight />
-      </PopoverTrigger>
-      <PopoverContent
-        side="top"
-        className="flex w-[9rem] items-center justify-center gap-3 rounded-xl border-zinc-700 bg-zinc-900 shadow-md"
+    <div className="flex gap-1">
+      <Link href={'https://github.com/Gilson96'}>
+        <Button className="cursor-pointer" variant="default" size="sm">
+          <FaGithub /> Github
+        </Button>
+      </Link>
+      <Link href={'https://www.linkedin.com/in/gilson-de-almeida/'}>
+        <Button className="cursor-pointer" variant="default" size="sm">
+          <FaLinkedin /> LinkedIn
+        </Button>
+      </Link>
+      <Link href={'mailto:grafael99@gmail.com'}>
+        <Button className="cursor-pointer" variant="default" size="sm">
+          <CgMail /> Gmail
+        </Button>
+      </Link>
+      <Link
+        href="/Gilson_Rafael_CV.pdf"
+        download="/Gilson_Rafael_CV.pdf"
+        aria-label="Download CV (PDF)"
       >
-        <Link href={'https://github.com/Gilson96'}>
-          <Tooltip>
-            <TooltipTrigger className="cursor-pointer">
-              <FaGithub size={30} className="text-white" />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>My Github</p>
-            </TooltipContent>
-          </Tooltip>
-        </Link>
-
-        <Link href={'https://www.linkedin.com/in/gilson-de-almeida'}>
-          <Tooltip>
-            <TooltipTrigger className="cursor-pointer">
-              <FaLinkedin size={30} className="text-blue-500" />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>My LinkedIn</p>
-            </TooltipContent>
-          </Tooltip>
-        </Link>
-
-        <Link href={'mailto:grafael99@gmail.com'}>
-          <Tooltip>
-            <TooltipTrigger className="cursor-pointer">
-              <SiGmail size={30} className="rounded-lg bg-white fill-red-500" />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>My Email</p>
-            </TooltipContent>
-          </Tooltip>
-        </Link>
-      </PopoverContent>
-    </Popover>
+        <Button className="cursor-pointer" variant="default" size="sm">
+          Download CV <ArrowDownToLine />
+        </Button>
+      </Link>
+    </div>
   </Block>
 )
 
