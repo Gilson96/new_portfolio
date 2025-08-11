@@ -19,7 +19,6 @@ import { TbBrandRedux } from 'react-icons/tb'
 import Block from './block'
 
 export function Skills() {
-  const stringSkills = '<Skills />'
   const screenSize = useScreenSize()
   return (
     <Popover>
